@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #f5efef;
+  --secondary-color: #97979d;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+header {
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--secondary-color);
+  /* height: 150px; */
+
+  z-index: 1000;
+  width: 100%;
+}
+
+#maintitle {
+  position: absolute;
+  top: -15px;
+  left: 450px;
+  font-size: 40px;
+  color: #0f056b;
+  border: none;
+  padding: 10px;
+}
+
+#currency {
+  position: absolute;
+  top: 30px;
+  left: 690px;
+  text-decoration: none;
+  color: lightgrey;
+  border: 3px solid lightgray;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+#weather {
+  position: absolute;
+  top: 30px;
+  left: 850px;
+  text-decoration: none;
+  color: lightgrey;
+  border: 3px solid lightgray;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+#selectgenre {
+  background-color: transparent;
+  color: lightgray;
+  position: absolute;
+  border-radius: 3px;
+  left: 400px;
+  height: 35px;
+  width: 150px;
+  margin-right: 10px;
+}
+
+#selectgenre .genre {
+  height: 20px;
+  background-color: var(--secondary-color);
+  border-bottom: solid 2px lightgray;
+  font-size: 20px;
+  padding: 10px;
+  line-height: 1.5px;
+}
+
+#selectgenre .genre:hover {
+  background-color: lightgray;
+  color: var(--secondary-color);
+}
+
+#popular {
+  position: absolute;
+  left: 25px;
+  border-radius: 16px;
+  border: solid 2px #0f056b;
+  width: 150px;
+  color: #0f056b;
+  background-color: coral;
+  transition: transform 0.3s ease;
+  height: 30px;
+}
+
+#popular:hover {
+  background-color: #0f056b;
+  color: coral;
+  transform: translateY(-6px);
+}
+
+#upcoming {
+  position: absolute;
+  left: 200px;
+  /* top: 10px; */
+  border-radius: 16px;
+  border: solid 2px #0f056b;
+  width: 150px;
+  color: #0f056b;
+  background-color: coral;
+  transition: transform 0.3s ease;
+  height: 30px;
+}
+
+#upcoming:hover {
+  background-color: #0f056b;
+  color: coral;
+  transform: translateY(-6px);
+}
+
+#search {
+  background-color: transparent;
+  border: 2px solid lightgrey;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  color: white;
+  font-family: inherit;
+  width: 320px;
+  height: 40px;
+  /* margin-right: 20px; */
+}
+
+#search:focus {
+  outline: 0;
+  background-color: var(--primary-color);
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+}
+
+#search::placeholder {
+  color: lightslategray;
+}
+
+i {
+  font-size: 25px;
+  color: lightgray;
+  margin-top: 5px;
+  margin-right: 2px;
+  /* position: absolute;
+  left: 20px; */
+}
+#btn {
+  border-radius: 8px;
+  /* background-color: rgb(186, 10, 10); */
+  border: solid 2px lightgrey;
+  color: lightslategray;
+  font-weight: 500;
+  font-size: large;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  position: absolute;
+  right: 32px;
+  height: 40px;
+  width: 50px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  width: 300px;
+  height: 530px;
+  margin: 1rem;
+  border-radius: 3px;
+  box-shadow: 5px 5px 10px rgba(236, 96, 16, 0.5);
+  background-color: var(--secondary-color);
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.movie img {
+  width: 100%;
+  height: 84%;
+}
+
+.movie-info {
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+  /* overflow-y: auto; */
+  /* overflow: hidden;
+  max-height: 30px; */
+  font-size: 16px;
+}
+
+.movie-info h3 {
+  margin-top: 0;
+  overflow-y: auto;
+  max-height: 100%;
+}
+.movie-info span {
+  background-color: var(--primary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.movie-info span.green {
+  color: lightgreen;
+}
+.movie-info span.orange {
+  color: orange;
+}
+.movie-info span.red {
+  color: red;
+}
+
+.overview {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 1rem;
+  max-height: 100%;
+  transform: translateY(-115%);
+  transition: transform 0.9s ease;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+
+#tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* background-color: red; */
+  gap: 20px;
+  width: 80%;
+  margin-left: 120px;
+}
+
+.tags {
+  /* background-color: blue; */
+  border-radius: 5px;
+  padding: 15px;
+  display: inline-block;
+  margin-top: 5px;
+  cursor: pointer;
+  color: lightslategray;
+  border: 2px solid lightslategrey;
+  transition: transform 0.6s ease;
+}
+
+.tags:hover {
+  box-shadow: 5px 5px 10px rgba(159, 159, 159, 0.5);
+  transform: translateY(-4px);
+  background-color: coral;
+}
+.knowmore {
+  background-color: coral;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin-top: 5px;
+}
+
+/* The Overlay (background) */
+/* W3School Overlay */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0); /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.embed.hide {
+  display: none;
+}
+
+.embed.show {
+  display: inline-block;
+}
+
+.arrow {
+  position: absolute;
+  z-index: 1500;
+}
+
+.arrow.left-arrow {
+  left: 5%;
+  z-index: 1500;
+  top: 350px;
+}
+
+.arrow.right-arrow {
+  z-index: 1500;
+  right: 5%;
+  top: 350px;
+}
+
+.dots {
+  margin-top: -50px;
+}
+
+.dots .dot {
+  padding: 10px 20px;
+  border-radius: 50%;
+  border: 5px solid var(--secondary-color);
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.dots .dot.active {
+  border-color: red;
+}
+
+#divyoutube {
+  position: relative;
+  top: -80px;
+}
+
+#videotitle {
+  color: lightslategray;
+  font-size: 40px;
+  position: relative;
+  top: -70px;
+}

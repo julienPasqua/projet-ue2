@@ -47,17 +47,6 @@ header {
   border-radius: 50px;
 }
 
-#weather {
-  position: absolute;
-  top: 30px;
-  left: 850px;
-  text-decoration: none;
-  color: lightgrey;
-  border: 3px solid lightgray;
-  padding: 10px;
-  border-radius: 50px;
-}
-
 #selectgenre {
   background-color: transparent;
   color: lightgray;
@@ -178,7 +167,6 @@ main {
   width: 300px;
   height: 530px;
   margin: 1rem;
-  border-radius: 3px;
   box-shadow: 5px 5px 10px rgba(236, 96, 16, 0.5);
   background-color: var(--secondary-color);
   position: relative;
@@ -251,7 +239,7 @@ main {
   align-items: center;
   flex-wrap: wrap;
   /* background-color: red; */
-  gap: 20px;
+  gap: 21px;
   width: 80%;
   margin-left: 120px;
 }
@@ -261,7 +249,7 @@ main {
   border-radius: 5px;
   padding: 15px;
   display: inline-block;
-  margin-top: 5px;
+  margin-top: 10px;
   cursor: pointer;
   color: lightslategray;
   border: 2px solid lightslategrey;

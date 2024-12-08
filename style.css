@@ -16,7 +16,7 @@ body {
 }
 
 header {
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   justify-content: flex-end;
   background-color: var(--secondary-color);
@@ -26,7 +26,7 @@ header {
   width: 100%;
 }
 
-#maintitle {
+/*#maintitle {
   position: absolute;
   top: -25px;
   left: 450px;
@@ -34,6 +34,36 @@ header {
   color: #0f056b;
   border: none;
   padding: 10px;
+}*/
+h1 {
+  font-size: 50px; /* Taille du titre */
+  font-weight: bold;
+  background: linear-gradient(
+    90deg,
+    #0f056b,
+    #ff7f50
+  ); /* Dégradé bleu à orange */
+  background-size: 200% 100%; /* Taille du dégradé */
+  -webkit-background-clip: text; /* Nécessaire pour Safari */
+  background-clip: text; /* Clip le dégradé au texte */
+  color: transparent; /* Rend le texte transparent pour voir le dégradé */
+  display: inline-block;
+  animation: deplacementDegrade 10s linear infinite; /* Animation du dégradé */
+  padding: 20px 50;
+  margin-right: 350px;
+}
+
+/* Définition de l'animation du dégradé */
+@keyframes deplacementDegrade {
+  0% {
+    background-position: -200% 0;
+  }
+  50% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 #currency {
@@ -81,7 +111,8 @@ header {
   color: #0f056b;
   background-color: coral;
   transition: transform 0.3s ease;
-  height: 30px;
+  height: 50px;
+  margin-top: 20px;
 }
 
 #popular:hover {
@@ -100,7 +131,8 @@ header {
   color: #0f056b;
   background-color: coral;
   transition: transform 0.3s ease;
-  height: 30px;
+  height: 50px;
+  margin-top: 20px;
 }
 
 #upcoming:hover {
@@ -111,14 +143,15 @@ header {
 
 #search {
   background-color: transparent;
-  border: 2px solid lightgrey;
+  border: 2px solid #0f056b;
   padding: 0.5rem 1rem;
   border-radius: 50px;
   font-size: 1rem;
   color: white;
   font-family: inherit;
-  width: 320px;
+  width: 250px;
   height: 40px;
+  margin-top: 20px;
   /* margin-right: 20px; */
 }
 
@@ -134,7 +167,7 @@ header {
 
 i {
   font-size: 25px;
-  color: lightgray;
+  color: #0f056b;
   margin-top: 5px;
   margin-right: 2px;
   /* position: absolute;
@@ -143,18 +176,19 @@ i {
 #btn {
   border-radius: 8px;
   /* background-color: rgb(186, 10, 10); */
-  border: solid 2px lightgrey;
+  border: solid 2px #0f056b;
   color: lightslategray;
   font-weight: 500;
   font-size: large;
   border-bottom-right-radius: 50px;
   border-top-right-radius: 50px;
   position: absolute;
-  right: 32px;
+  right: 16px;
   height: 40px;
   width: 50px;
   background-color: transparent;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 main {
